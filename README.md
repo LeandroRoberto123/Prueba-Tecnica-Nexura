@@ -43,6 +43,7 @@ Instala todas las dependencias usando composer
 
     composer install
     composer update
+    npm install
 
 Copie el archivo env de ejemplo y realice los cambios de configuración necesarios en el archivo .env
 
