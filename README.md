@@ -7,60 +7,73 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
-
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## Learning Laravel
-
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 2000 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
-
 ## Contributing
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
-## Code of Conduct
+----------
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+# Getting started
 
-## Security Vulnerabilities
+## Instalación
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Consulte la guía de instalación oficial de laravel para conocer los requisitos del servidor antes de comenzar. [Official Documentation](https://laravel.com/docs/5.4/installation#installation)
 
-## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Clonar el repositorio
+
+    git clone https://github.com/LeandroRoberto123/Prueba-Tecnica-Nexura.git
+
+Cambiar a la carpeta del repositorio
+
+    cd nexura_technical_test
+
+Instala todas las dependencias usando composer
+
+    composer install
+
+Copie el archivo env de ejemplo y realice los cambios de configuración necesarios en el archivo .env
+
+    cp .env.example .env
+
+Generar una nueva clave de aplicación
+
+    php artisan key:generate
+
+Ejecute las migraciones de la base de datos (**Establezca la conexión de la base de datos en .env antes de migrar**)
+
+    php artisan migrate
+
+Inicie el servidor de desarrollo local
+
+    php artisan serve
+
+Ahora puede acceder al servidor en http://localhost:8000
+
+  
+**Asegúrese de configurar la información de conexión de la base de datos correcta antes de ejecutar las migraciones** [Variables de entorno](#environment-variables)
+
+    php artisan migrate
+    php artisan serve
+
+## Database seeding
+
+**Rellene la base de datos con datos iniciales tablas areas y roles.**
+
+Ejecute el sembrador de base de datos y listo.
+
+    php artisan db:seed
+
+***Note*** : Se recomienda tener una base de datos limpia antes de sembrar. Puede actualizar sus migraciones en cualquier momento para limpiar la base de datos ejecutando el siguiente comando
+
+    php artisan migrate:refresh
+
+## Carpetas
+
+- `app` - Contiene todos los modelos Eloquent
+- `app/Http/Controllers/` - Contiene todos los controladores
+- `app/Http/Middleware` - Contiene el middleware de autenticación
+- `config` - Contiene todos los archivos de configuración de la aplicación
+- `database/migrations` - Contiene todas las migraciones de bases de datos.
+- `database/seeds` - Contiene el sembrador de base de datos.
+- `routes` - Contiene todas las rutas
