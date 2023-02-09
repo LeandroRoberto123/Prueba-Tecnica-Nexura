@@ -19,6 +19,9 @@ Thank you for considering contributing to the Laravel framework! The contributio
 
 Consulte la guía de instalación oficial de laravel para conocer los requisitos del servidor antes de comenzar. [Official Documentation](https://laravel.com/docs/5.4/installation#installation)
 
+El proyecto se realizo en Laravel v9.
+
+Laravel 9.x requiere una versión mínima de PHP de 8.0.
 
 Clonar el repositorio
 
@@ -27,10 +30,19 @@ Clonar el repositorio
 Cambiar a la carpeta del repositorio
 
     cd nexura_technical_test
+    
+Instalar composer si no se tiene instalado 
 
+    [Download Composer](https://getcomposer.org/download/) 
+    
+ Instalar Node.js si no se tiene instalado 
+
+    [Download Node.js](https://nodejs.org/es/) 
+    
 Instala todas las dependencias usando composer
 
     composer install
+    composer update
 
 Copie el archivo env de ejemplo y realice los cambios de configuración necesarios en el archivo .env
 
@@ -44,9 +56,10 @@ Ejecute las migraciones de la base de datos (**Establezca la conexión de la bas
 
     php artisan migrate
 
-Inicie el servidor de desarrollo local
+Inicie el servidor de desarrollo local de laravel y de vite.js
 
     php artisan serve
+    npm run dev
 
 Ahora puede acceder al servidor en http://localhost:8000
 
